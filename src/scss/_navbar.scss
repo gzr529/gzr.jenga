@@ -1,0 +1,29 @@
+
+.main_bar{
+   display: flex;
+   position: absolute;
+   background-color: rgba(0, 0, 0, 0.808);
+   backdrop-filter: saturate(180%);
+   backdrop-filter: blur(20px);
+   width: 100%;
+   position: fixed;
+   z-index: 99;
+   height: 6rem;
+   align-items: center;
+   justify-content: left;
+   list-style-type: none;
+   text-align: center;
+}
+
+.main_title{
+   color: rgb(255, 255, 255);
+   font-size: 2rem;
+   font-family: CAH;
+   padding-left: 0.75rem;
+}
+
+.logo{
+   width: 80px;
+   height: 80px;
+   padding-left: 0.75rem;
+}
