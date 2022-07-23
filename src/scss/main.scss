@@ -1,4 +1,11 @@
+ body[data-aos-duration='4000'] [data-aos],
+  [data-aos][data-aos][data-aos-duration='4000'] {
+    transition-duration: 4000ms;
+  }
+  
+@import "../../node_modules/aos/src/sass/aos.scss";
 @import "navbar.scss";
+@import "body.scss";
 
 @font-face {
    font-family: 'CAH';
@@ -11,7 +18,7 @@ body{
     padding: 0;
     margin: 0;
     font-size: 1rem;
-    background-color: rgba(166, 59, 219, 0.8);
+    background-color: rgb(20, 18, 20);
     height: 100%;
 }
 

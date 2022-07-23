@@ -1,0 +1,76 @@
+
+.intro_section {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 60rem;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: rgb(59,0,255);
+    background: linear-gradient(90deg, rgba(59,0,255,1) 0%, rgba(220,27,228,1) 52%, rgba(230,189,244,1) 100%);
+}
+
+
+.intro_msg{
+    color: rgb(255, 255, 255);
+    font-size: 4rem;
+    font-family: CAH;
+}
+
+.intro_sub_msg{
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    font-family: CAH;
+    padding: 0rem;
+    margin: -2rem;
+}
+
+.logo_body{
+    position: absolute;
+    opacity: 0.1;
+    padding-bottom: 1rem;
+}
+
+.blur_effect{
+    width: 100%;
+    height: 1rem;
+    background-color: rgb(20, 18, 20);
+    filter: blur(20px);
+    margin-top: -1rem;
+}
+
+.rules_section {
+    display: flex;
+    height: 100rem;
+    width: 100%;
+    position: relative;
+    align-items: center;
+    justify-content: left;
+    flex-direction: row;
+//  background-color: rgb(221, 27, 221);
+}
+
+.rules_message {
+    height: 100rem;
+    width: auto;
+    margin: 1rem;
+    font-size: 2rem;
+    flex-grow: 5;
+    font-family: CAH;
+    color: rgb(255, 255, 255);
+ //   background-color: rgb(59, 221, 27);
+}
+
+.rules_list {
+    height: 100rem;
+    width: 20%;
+    margin: 1rem;
+    flex-grow: 2;
+    background-color: rgb(55, 56, 56);
+    margin-top: 3rem;
+}
+
+.dares_text{  
+    padding-left: 1rem;
+}
