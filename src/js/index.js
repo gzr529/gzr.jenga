@@ -5,15 +5,37 @@ console.log("RTC Connecting to SpiritPower...");
 var AOS = require('aos');
 AOS.init();
 
-const ogDares = [
-{dare: "Take a Shot (From Your Revolver)", number: 1, spicy: false},
-{dare: "Murder Your Father", number: 2, spicy: false},
-{dare: "Over Throw the Government", number: 3, spicy: false}
+const originalDares = [
+{dare: "Take a Shot (From Your Revolver)", dareNumber: 1, spicy: false},
+{dare: "Murder Your Father", dareNumber: 2, spicy: false},
+{dare: "Hug Your Mom", dareNumber: 3, spicy: true},
+{dare: "Over Throw the Government", dareNumber: 4, spicy: false},
 ];
 
-document.getElementById("dares").innerHTML = ogDares[0]; 
+originalDares.forEach(function(originalDareNames) {
+    console.log(originalDareNames.dare); 
+});
 
-console.log(ogDares[0]);
+originalDares.forEach(function(originalDareNumber) {
+    console.log(originalDareNumber.dareNumber); 
+});
+
+originalDares.forEach(function(originalDareSpice) {
+    console.log(originalDareSpice.spicy); 
+});
+
+const spicyDares = originalDares.filter(game => game.spicy === true);
+
+originalDares.forEach(function(originalDareSpice) {
+    console.log(originalDareSpice.spicy); 
+});
+
+console.log(spicyDares)
+
+const noSpicyDares = originalDares.filter(game => game.spicy === false);
+
+console.log(noSpicyDares);
+
 
 /*
 
@@ -25,5 +47,4 @@ function numberSorter() {
 
 */
 
-ogDares.sort(function(a, b){return 0.5 - Math.random()});
 

@@ -11,11 +11,28 @@
     background: linear-gradient(90deg, rgba(59,0,255,1) 0%, rgba(220,27,228,1) 52%, rgba(230,189,244,1) 100%);
 }
 
+@media (max-width:450px){
+.intro_section {
+    height: 40rem;
+      }
+}
 
 .intro_msg{
     color: rgb(255, 255, 255);
     font-size: 4rem;
     font-family: CAH;
+}
+
+@media (max-width:1200px){
+.intro_msg {
+    font-size: 3rem;
+      }
+}
+
+@media (max-width:450px){
+.intro_msg {
+    font-size: 1.5rem;
+      }
 }
 
 .intro_sub_msg{
@@ -26,10 +43,24 @@
     margin: -2rem;
 }
 
+@media (max-width:1200px){
+.intro_sub_msg {
+    font-size: 1.4rem;
+    padding-top: 1rem;
+    }
+}
+
 .logo_body{
     position: absolute;
     opacity: 0.1;
     padding-bottom: 1rem;
+}
+
+@media (max-width:450px){
+.logo_body {
+    height: 16rem;
+    width: auto;
+      }
 }
 
 .blur_effect{
