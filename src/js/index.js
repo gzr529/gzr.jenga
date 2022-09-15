@@ -17,7 +17,6 @@ const originalDares = [
 
 function getRandom(){
     const randomDare = originalDares[Math.floor(Math.random() * originalDares.length)]
-    console.log(randomDare);
     const randomDareText = (Object.values(randomDare)[0]);
     const randomDareNumber = (Object.values(randomDare)[1]);
     //console.log(randomDareText);
@@ -26,7 +25,7 @@ function getRandom(){
     document.getElementById('dareNumber').innerHTML=(randomDareNumber);
 };
 
-const noSpicyDares = originalDares.filter(game => game.spicy === false);
+const noSpicyDares = originalDares.filter(dared => dared.spicy === false);
 
 function getRandomNoSpice(){
     const randomDareNoSpice = noSpicyDares[Math.floor(Math.random() * noSpicyDares.length)]
@@ -41,5 +40,14 @@ function getRandomNoSpice(){
 document.getElementById('randomDareButton').addEventListener('click', getRandom)
 document.getElementById('randomDareButtonNoSpice').addEventListener('click', getRandomNoSpice)
 
+const originalDareList = (Object.values(Object.values(originalDares)[0])[0]);
 
+originalDares.forEach((element) => {
+const individualDare = (Object.values(element)[0]);
+console.log(individualDare);
+document.getElementById('testy').insertAdjacentHTML=(afterbegin, individualDare);
+});
+
+console.log(originalDareList);
+console.log(originalDares.length);
 
