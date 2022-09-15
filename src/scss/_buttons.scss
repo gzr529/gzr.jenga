@@ -1,5 +1,8 @@
 //BUTTON CSS BY SQUARESHOT : https://getcssscan.com/css-buttons-examples
-
+.button_container{
+    display: flex;
+    justify-content: center;
+}
 .buttonRandomDare {
   align-items: center;
   background-color: #ffffff;
@@ -12,17 +15,20 @@
   font-family: CAH;
   font-size: 16px;
   height: 48px;
-  justify-content: center;
+  justify-content: space-evenly;
   line-height: 24px;
   max-width: 100%;
   padding: 0 25px;
   position: relative;
   text-align: center;
   text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
   touch-action: manipulation;
   margin-top: 1rem;
+  -webkit-user-select: none; /* Safari */      
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; 
+  margin: 1rem;
 }
 
 .buttonRandomDare:after {
@@ -45,7 +51,7 @@
 }
 
 .buttonRandomDare:active {
-  background-color: #ffdeda;
+  background-color: #f1daff;
   outline: 0;
 }
 

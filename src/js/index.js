@@ -7,8 +7,8 @@ AOS.init();
 
 const originalDares = [
 {dare: "Take a Shot (From Your Revolver)", dareNumber: 1, spicy: false},
-{dare: "Murder Your Father", dareNumber: 2, spicy: false},
-{dare: "Hug Your Mom", dareNumber: 3, spicy: true},
+{dare: "Text Your Ex", dareNumber: 2, spicy: false},
+{dare: "Admit a dark secret", dareNumber: 3, spicy: false},
 {dare: "Over Throw the Government", dareNumber: 4, spicy: false},
 {dare: "Hug Your Dad", dareNumber: 5, spicy: true},
 ];
@@ -21,13 +21,25 @@ function getRandom(){
     const randomDareText = (Object.values(randomDare)[0]);
     const randomDareNumber = (Object.values(randomDare)[1]);
     //console.log(randomDareText);
-    console.log(randomDareNumber);
+    //console.log(randomDareNumber);
     document.getElementById('daresText').innerHTML=(randomDareText);
     document.getElementById('dareNumber').innerHTML=(randomDareNumber);
 };
 
-document.getElementById('randomDareButton').addEventListener('click', getRandom)
+const noSpicyDares = originalDares.filter(game => game.spicy === false);
 
+function getRandomNoSpice(){
+    const randomDareNoSpice = noSpicyDares[Math.floor(Math.random() * noSpicyDares.length)]
+    const randomDareTextNoSpice = (Object.values(randomDareNoSpice)[0]);
+    const randomDareNumberNoSpice = (Object.values(randomDareNoSpice)[1]);
+    //console.log(randomDareText);
+    //console.log(randomDareNumber);
+    document.getElementById('daresText').innerHTML=(randomDareTextNoSpice);
+    document.getElementById('dareNumber').innerHTML=(randomDareNumberNoSpice);
+};
+
+document.getElementById('randomDareButton').addEventListener('click', getRandom)
+document.getElementById('randomDareButtonNoSpice').addEventListener('click', getRandomNoSpice)
 
 
 

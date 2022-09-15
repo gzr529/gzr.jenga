@@ -1,10 +1,45 @@
-.dare_number{
-    opacity: 20%;
-    font-size: 9rem;
+.content_section {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    //background-color: rgb(221, 27, 221);
+}
+
+.dare_section {
+    height: auto;
+    width: 90%;
+    margin: 1rem;
+    font-size: 2rem;
     font-family: CAH;
     color: rgb(255, 255, 255);
-    padding: none;
-    margin: none;
-    position: absolute;
-    z-index: -99;
+    background-color: rgba(26, 27, 26, 0.534);
+    flex-direction: column;
+}
+
+.dares_text{  
+    padding-left: 1rem;
+}
+
+.dare_number{
+    position: relative;
+    width: 1rem;
+    opacity: 20%;
+    font-size: 9rem;
+    color: rgb(255, 255, 255);
+    padding: 1rem;
+    margin-bottom: -7.3rem;
+    margin-top: -0.1rem;
+}
+
+.rules_section {
+    height: auto;
+    width: 90%;
+    margin: 1rem;
+ //   background-color: rgb(55, 56, 56);
+    margin-top: 3rem;
+    background-color: rgb(221, 27, 27);
 }
