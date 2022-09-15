@@ -13,11 +13,18 @@ const originalDares = [
 {dare: "Hug Your Dad", dareNumber: 5, spicy: true},
 ];
 
+//Grabs a ANY UNFLITERED DARE and displays the actual dare
+
 function getRandom(){
     const randomDare = originalDares[Math.floor(Math.random() * originalDares.length)]
-    console.log(randomDare)
-    console.log(Object.keys(randomDare));
-}
+    console.log(randomDare);
+    const randomDareText = (Object.values(randomDare)[0]);
+    const randomDareNumber = (Object.values(randomDare)[1]);
+    //console.log(randomDareText);
+    console.log(randomDareNumber);
+    document.getElementById('daresText').innerHTML=(randomDareText);
+    document.getElementById('dareNumber').innerHTML=(randomDareNumber);
+};
 
 document.getElementById('randomDareButton').addEventListener('click', getRandom)
 

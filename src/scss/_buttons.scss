@@ -1,0 +1,60 @@
+//BUTTON CSS BY SQUARESHOT : https://getcssscan.com/css-buttons-examples
+
+.buttonRandomDare {
+  align-items: center;
+  background-color: #ffffff;
+  border: 2px solid rgb(14, 2, 29);
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: CAH;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-top: 1rem;
+}
+
+.buttonRandomDare:after {
+  background: linear-gradient(90deg, rgba(176,0,255,1) 0%, rgba(69,16,158,1) 57%, rgba(92,69,143,1) 97%);
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+.buttonRandomDare:hover:after {
+  transform: translate(0, 0);
+}
+
+.buttonRandomDare:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.buttonRandomDare:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .button-56 {
+    padding: 0 40px;
+  }
+}
