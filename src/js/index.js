@@ -7,7 +7,7 @@ AOS.init();
 
 const originalDares = [
 {dare: "Strip one piece of clothing.", dareNumber: 1, spicy: true},
-{dare: "Take a picture of you interlocking hands with the person three spaces left from you and post <br> it on your Instagram story.", dareNumber: 2, spicy: false},
+{dare: "Take a picture of you interlocking hands with the person three spaces left from you and post it on your Instagram story.", dareNumber: 2, spicy: false},
 {dare: "Flick the person across from you forehead.", dareNumber: 3, spicy: false},
 {dare: "Kiss the person to your right on the lips.", dareNumber: 4, spicy: true},
 {dare: "Have a push-up competition with the person to your right - the loser picks another block.", dareNumber: 5, spicy: false},
@@ -53,9 +53,9 @@ const originalDares = [
 {dare: "Give the person 7 to your left a piggyback around the room.", dareNumber: 45, spicy: false},
 {dare: "Kiss the person to your right on the neck ", dareNumber:46 , spicy: true},
 {dare: "Make fun of one thing for everyone in the group or as many as you can", dareNumber: 47 , spicy: true},
-{dare: "Sit on the person 8 seats away from you on your right’s lap. You can only get up for challenge or <br> until the game ends (or the person under you gets uncomfortable)", dareNumber: 48, spicy: true},
+{dare: "Sit on the person 8 seats away from you on your right’s lap. You can only get up for challenge or until the game ends (or the person under you gets uncomfortable)", dareNumber: 48, spicy: true},
 {dare: "Recall the dumbest thing you’ve done for another person.", dareNumber: 49, spicy: false},
-{dare: "Unhook the person to your left 9 seats away from you bra. If you fail to do so because <br> you’re a nerd, you must to a Truth or Dare with said person.", dareNumber: 50, spicy: true},
+{dare: "Unhook the person to your left 9 seats away from you bra. If you fail to do so because you’re a nerd, you must to a Truth or Dare with said person.", dareNumber: 50, spicy: true},
 {dare: "Confess your weirdest fetish.", dareNumber: 51, spicy: false},
 {dare: "Paint the person 3 seats to your left’s nails.", dareNumber: 52 , spicy: false},
 {dare: "Go Again two moe times, if the tower falls this time, roll twice", dareNumber: 53, spicy: false},
@@ -90,21 +90,41 @@ const originalDareList = (Object.values(Object.values(originalDares)[0])[0]);
 originalDares.forEach((element) => {
 const individualDare = (Object.values(element)[0]);
 console.log(individualDare);
-document.getElementById('original_dares_list').innerHTML+=(`<li id="dare_list_id" class="original_dares_list">` + individualDare + `</li>`);
+document.getElementById('orginialDaresList').innerHTML+=(`<li id="dare_list_id" class="original_dares_list">` + individualDare + `</li>`);
 });
 
 //Minimize or Maximize Div 
 
 function changeHeightMin() {
-document.getElementById('original_dares_list').style.height = "0rem";
-document.getElementById('original_dares_list').style.color = "rgba(0, 0, 0, 0.00)";
+document.getElementById('orginialDaresList').style.height = "0rem";
+document.getElementById('orginialDaresList').style.color = "rgba(0, 0, 0, 0.00)";
 }
 
 document.getElementById('minListOne').addEventListener('click', changeHeightMin)
 
 function changeHeightMax() {
-document.getElementById('original_dares_list').style.height = "30rem"
-document.getElementById('original_dares_list').style.color = "rgba(255, 255, 255, 0.35)";
+document.getElementById('orginialDaresList').style.height = "30rem"
+document.getElementById('orginialDaresList').style.color = "rgba(255, 255, 255, 0.35)";
 }
 
 document.getElementById('maxListOne').addEventListener('click', changeHeightMax)
+
+
+function fn1() {
+    var enteredDareNumber = document.getElementById("dareNumberSearch").value;
+    alert(enteredDareNumber + " players currently playing!");
+};
+
+console.log(enteredDareNumber + "U");
+
+document.getElementById('enterButton1').addEventListener('click', fn1)
+
+/*
+var xyz = document.getElementById(`myInput2`).value;
+function myFunction2() {
+console.log(xyz)
+}
+let playerCount = 10
+const randomNumber = Math.floor(Math.random() * playerCount) + 1;
+console.log(randomNumber);
+*/

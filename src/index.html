@@ -27,10 +27,22 @@
 
         <div class="dare_section">
 
-            <span class="button_container">
-                <button id="randomDareButton" class="buttonRandomDare" role="buttonRandomDare">Roll ANY Dare</button>
-                <button id="randomDareButtonNoSpice" class="buttonRandomDare" role="buttonRandomDare">Roll NO SPICE Dares</button>
-            </span> 
+            <div class="input_container"> 
+                <span class="button_container">
+                    <input class="dare_search" id="dareNumberSearch" placeholder="How many players..?">
+                    <button class="enterButton" id="enterButton1">X</button>
+                </span>
+
+                <span class="button_container">
+                    <button class="randomDareButton" id="randomDareButton" >Roll ANY Dare</button>
+                    <button class="randomDareButton" id="randomDareButtonNoSpice" >Roll NO SPICE Dares</button>
+                </span> 
+
+                <span class="button_container">
+                <input class="dare_search" id="myInput" placeholder="Search for dare number...">
+                <button class="enterButton" id="enterButton2">X</button>
+                </span>
+            </div>  
 
             <span class="dare_container">
                 <p id="dareNumber" class="dare_number">#</p>
@@ -45,7 +57,7 @@
                 <button id="maxListOne" class="minMaxButton" title="Maximize">◱</button>
             </div>
 
-            <div class="dare_list_container" id="original_dares_list">
+            <div class="dare_list_container" id="orginialDaresList">
                <div class="original_dares_overflow">
                     <p class="dares_list_container"></p>
                     <p class="dares_list_closing"></p>
