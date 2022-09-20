@@ -6,17 +6,18 @@
     position: relative;
     align-items: center;
     justify-content: center;
-    //background-color: rgb(221, 27, 221);
 }
 
 .dare_section {
-    height: auto;
+    height: max-content;
+    padding-bottom: 1.5rem;
     width: 90%;
     margin: 1rem;
     font-size: 2rem;
     font-family: CAH;
     color: rgb(255, 255, 255);
-    background-color: rgba(26, 27, 26, 0.534);
+    background-color: rgba(26, 29, 26, 0.7);
+    border-radius: 2rem;
     flex-direction: column;
 }
 
@@ -35,11 +36,88 @@
     margin-top: -0.1rem;
 }
 
+.original_dares_list_title{
+    font-size: 4rem;
+}
+
+.dares_list_container{
+    margin-top: -0.4rem;
+    text-overflow: ellipsis;
+    width: 1rem;
+}
+
+.original_dares_list{
+    font-size: 1.45rem;
+    -moz-transition:color .25s ease-in-out;
+    -o-transition:color .25s ease-in-out;
+    -webkit-transition:color .25s ease-in-out;
+    transition:color .25s ease-in-out;
+    list-style-type: numbered;
+    padding-top: 2rem;
+    width: max-content;
+    margin-left: 0.3rem;
+    text-overflow: ellipsis;
+}
+
+.original_dares_list:hover{
+    color: rgb(255, 255, 255);
+}
 .rules_section {
     height: auto;
     width: 90%;
     margin: 1rem;
- //   background-color: rgb(55, 56, 56);
     margin-top: 3rem;
-    background-color: rgb(221, 27, 27);
 }
+
+.dares_list_closing{
+    margin-bottom: -3rem;
+    margin-top: -2rem;
+    font-size: 2rem;
+    color: rgb(75, 75, 75);
+}
+
+.original_dares_list_title{
+    font-size: 3rem;
+}
+
+.dare_list_container{
+    background-color:rgb(40,36,36);
+    color: rgba(255, 255, 255, 0.35);
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    border-top: 2px solid rgba(255, 255, 255, 0.305);
+    padding: 1rem;
+    padding-right: 4rem;
+    margin-left: 2rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 10rem;
+    width: 75%;
+    text-overflow: ellipsis;
+    height: 30rem;
+    -webkit-transition: 2s;
+    -moz-transition: 2s;
+    -ms-transition: 2s;
+    -o-transition: 2s;
+    transition: 2s;
+}
+
+.dare_list_container::-webkit-scrollbar {
+    display: none;
+}
+
+.title_container{
+    display: flex;
+    flex-direction: row;
+    background-color:rgb(40,36,36);
+    width: 75%;
+    height: 5rem;
+    padding: 1rem;
+    padding-right: 4rem;
+    padding-bottom: 2rem;
+    margin-left: 2rem;
+    margin-bottom: -3.3rem;
+    border-radius: 2rem;
+    z-index: 99;
+}
+

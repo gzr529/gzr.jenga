@@ -21,21 +21,38 @@
         <p class="intro_sub_msg" data-aos="fade-up" data-aos-duration="4000" data-aos-anchor-placement="bottom-bottom">Don't be ashamed, its fun.</p>
     </section>
 
-    <div class="blur_effect"></div>
+    <div class="blur_effect"></div> <!-- Simple Blur Transition for Seperation ================================-->
 
     <section class="content_section">
+
         <div class="dare_section">
+
             <span class="button_container">
                 <button id="randomDareButton" class="buttonRandomDare" role="buttonRandomDare">Roll ANY Dare</button>
                 <button id="randomDareButtonNoSpice" class="buttonRandomDare" role="buttonRandomDare">Roll NO SPICE Dares</button>
-
             </span> 
-            <p id="dareNumber" class="dare_number">#</p>
-            <p id="daresText" class="dares_text">What awaits you...?</p> 
-            <header class="dares_text">Original Dare List?</>
-            <p class="dares_text" id="testy">LOREM IPSUM</p>
+
+            <span class="dare_container">
+                <p id="dareNumber" class="dare_number">#</p>
+                <p id="daresText" class="dares_text">What awaits you...?</p> 
+            </span>
+
+            <hr class="line"> <!-- Simple Line for Seperation ================================-->
+
+            <div class="title_container">
+                <header class="original_dares_list_title">Original Dare List</header>
+                <button id="minListOne" class="minMaxButton" title="Minimize">_</button>
+                <button id="maxListOne" class="minMaxButton" title="Maximize">◱</button>
+            </div>
+
+            <div class="dare_list_container" id="original_dares_list">
+               <div class="original_dares_overflow">
+                    <p class="dares_list_container"></p>
+                    <p class="dares_list_closing"></p>
+                </div>
+            </div>
+
         </div>
-        <p class="rules_section"></p>
     </section>
 
     <script src="js/index.js"></script>
