@@ -1,4 +1,4 @@
-.content_section {
+.bodySection {
     display: flex;
     flex-direction: column;
     height: auto;
@@ -8,7 +8,7 @@
     justify-content: center;
 }
 
-.dare_section {
+.dareSection {
     height: max-content;
     padding-bottom: 1.5rem;
     width: 90%;
@@ -21,15 +21,15 @@
     flex-direction: column;
 }
 
-.dares_text{  
-    padding-left: 1rem;
-    padding-bottom: 1rem;
-    height: 2rem;
-    opacity: 1;
+.inputsContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
-
-.dare_number{
+.outputDareNumber{
     position: relative;
     opacity: 20%;
     width: 1rem;
@@ -38,6 +38,13 @@
     padding: 1rem;
     margin-bottom: -7.3rem;
     margin-top: -0.1rem;
+}
+
+.outputDareText{  
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    height: 2rem;
+    opacity: 1;
 }
 
 /*
@@ -55,7 +62,7 @@
 }
 */
 
-.title_container{
+.dareInfo{
     display: flex;
     flex-direction: row;
     background-color:rgb(40,36,36);
@@ -69,21 +76,38 @@
     border-radius: 1rem;
     z-index: 99;
     justify-content: space-between;
+    font-size: 3rem;
 }
 
-
-.original_dares_list_title{
-    font-size: 4rem;
-    justify-self: left;
-}
-
-.dares_list_container{
-    margin-top: -0.4rem;
+.dareList{
+    background-color:rgb(40,36,36);
+    color: rgba(255, 255, 255, 0.35);
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-top: 2px solid rgba(255, 255, 255, 0.305);
+    padding: 1rem;
+    padding-right: 4rem;
+    margin-left: 2rem;
+    margin-top: -2rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 10rem;
+    width: 75%;
     text-overflow: ellipsis;
-    width: 1rem;
+    height: 30rem;
+    -webkit-transition: 2s;
+    -moz-transition: 2s;
+    -ms-transition: 2s;
+    -o-transition: 2s;
+    transition: 2s;
+    line-height: 0.5rem;
 }
 
-.original_dares_list{
+.dareList::-webkit-scrollbar {
+    display: none;
+}
+
+.dareText{
     font-size: 1.45rem;
     -moz-transition:color .25s ease-in-out;
     -o-transition:color .25s ease-in-out;
@@ -96,50 +120,13 @@
     text-overflow: ellipsis;
 }
 
-.original_dares_list:hover{
+.dareText:hover{
     color: rgb(255, 255, 255);
 }
+
 .rules_section {
     height: auto;
     width: 90%;
     margin: 1rem;
     margin-top: 3rem;
 }
-
-.dares_list_closing{
-    margin-bottom: -3rem;
-    margin-top: -2rem;
-    font-size: 2rem;
-    color: rgb(75, 75, 75);
-}
-
-.original_dares_list_title{
-    font-size: 3rem;
-}
-
-.dare_list_container{
-    background-color:rgb(40,36,36);
-    color: rgba(255, 255, 255, 0.35);
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-    border-top: 2px solid rgba(255, 255, 255, 0.305);
-    padding: 1rem;
-    padding-right: 4rem;
-    margin-left: 2rem;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    height: 10rem;
-    width: 75%;
-    text-overflow: ellipsis;
-    height: 30rem;
-    -webkit-transition: 2s;
-    -moz-transition: 2s;
-    -ms-transition: 2s;
-    -o-transition: 2s;
-    transition: 2s;
-}
-
-.dare_list_container::-webkit-scrollbar {
-    display: none;
-}
-

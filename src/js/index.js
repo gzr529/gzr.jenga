@@ -14,7 +14,7 @@ const originalDares = [
 {dare: "Rank everyone 1-10 on how attractive they are.", dareNumber: "0" + 6, spicy: false},
 {dare: "Let the person on your right text anyone from your phone (within reason)", dareNumber: "0" + 7, spicy: true},
 {dare: "Give a hickey on the neck to the person 2 seats away from you to the rights.", dareNumber:"0" + 8, spicy: true},
-{dare: "Boobs or Butt? 🤔", dareNumber: "0" + 9, spicy: true},
+{dare: "Boobs or Butt?", dareNumber: "0" + 9, spicy: true},
 {dare: "Name the last person you’ve kissed with.", dareNumber: 10 , spicy: true},
 {dare: "Do a staring contest for 30 seconds person to your right, the person who fails rolls a dare", dareNumber: 11 , spicy: false},
 {dare: "Text your crush or ex.", dareNumber: 12 , spicy: false},
@@ -93,7 +93,7 @@ document.getElementById('randomDareButtonNoSpice').addEventListener('click', get
 
 originalDares.forEach((element) => {
 const individualDare = (Object.values(element)[0]);
-document.getElementById('orginialDaresList').innerHTML+=(`<li id="dare_list_id" class="original_dares_list">` + individualDare + `</li>`);
+document.getElementById('orginialDaresList').innerHTML+=(`<li id="dare_list_id" class="dareText">` + individualDare + `</li>`);
 });
 
 //Minimize or Maximize Div 

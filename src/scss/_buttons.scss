@@ -1,13 +1,14 @@
 //BUTTON CSS BY SQUARESHOT : https://getcssscan.com/css-buttons-examples
-.button_container{
+.buttonContainer{
     display: flex;
     justify-content: center;
-    width: 75%;
     align-items: center;
+    width: 75%;
 }
-.randomDareButton,
-.dare_search,
-.enterButton {
+
+.textInput,
+.enterButton,
+.dareButton {
   align-items: center;
   background-color: #ffffff;
   border: 2px solid rgb(14, 2, 29);
@@ -17,11 +18,9 @@
   display: flex;
   font-size: 16px;
   font-family: CAH;
-  height: 48px;
+  height: 3rem;
   justify-content: space-evenly;
   line-height: 24px;
-  width: 30%;
-  padding: 0 25px;
   position: relative;
   text-align: center;
   text-decoration: none;
@@ -33,20 +32,21 @@
   user-select: none;
 }
 
-.noSpiceButton{
-  margin-left: 1.5rem;
+.textInput{
+  width: 93%;
+  margin-right: 1%;
 }
 
-.randomDareButton{
-  width: 50%;
+.enterButton{
+  width: 6%;
+  background-color: #f1daff;
 }
 
-.dare_search{
-  width: 95%;
-  margin-right: 0.7rem;
+.dareButton{
+  width: 49%;
 }
 
-.randomDareButton:after {
+.dareButton:after {
   //background: linear-gradient(90deg, rgba(176,0,255,1) 0%, rgba(69,16,158,1) 57%, rgba(92,69,143,1) 97%);
    background: linear-gradient(79deg, rgba(99,9,121,1) 0%, rgba(210,44,242,1) 35%, rgba(217,9,243,1) 70%, rgba(158,0,255,1) 100%);
   border-radius: 8px;
@@ -61,26 +61,24 @@
   z-index: -1;
 }
 
-.randomDareButton:hover:after {
+.dareButton:hover:after {
   transform: translate(0, 0);
 }
 
-.randomDareButton:active {
+.dareButton:active {
   background-color: #f1daff;
   outline: 0;
 }
 
-.randomDareButton:hover {
+.dareButton:hover {
   outline: 0;
 }
 
-@media (min-width: 768px) {
-  .button-56 {
-    padding: 0 40px;
-  }
+.spiceNoButton{
+  margin-left: 2%;
 }
 
-.minMaxButton{
+.resizeButton{
     width: 3rem;
     height: 3rem;
     margin-left: 1rem;
@@ -96,28 +94,15 @@
     transition:color .25s ease-in-out;
 }
 
-.minMaxButton:hover{
+.resizeButton:hover{
   color: rgb(81, 69, 69);
 }
 
-.minMaxButton:hover:after{
+.resizeButton:hover:after{
   transform: scale(2rem, 2rem);
 }
 
-.Maximize{
+.maximizeButton{
   margin-right: -3rem;
 }
 
-.input_container{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
-.enterButton{
-  width: 1rem;
-  margin-left: 0rem;
-  background-color: #f1daff;
-}

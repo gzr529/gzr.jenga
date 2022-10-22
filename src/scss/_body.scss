@@ -1,6 +1,6 @@
 // Main title words and introduction phrase
 
-.intro_section {
+.introSection {
     display: flex;
     position: relative;
     width: 100%;
@@ -13,36 +13,36 @@
 }
 
 @media (max-width:450px){
-.intro_section {
+.introSection {
     height: 40rem;
       }
 }
 
-.intro_msg{
+.introMessageOne{
     color: rgb(255, 255, 255);
     font-size: 4rem;
     font-family: CAH;
 }
 
 @media (max-width:1200px){
-.intro_msg {
+.introMessageOne{
     font-size: 3rem;
       }
 }
 
 @media (max-width:820px){
-.intro_msg {
+.introMessageOne {
     font-size: 2.4rem;
       }
 }
 
 @media (max-width:450px){
-.intro_msg {
+.introMessageOne {
     font-size: 1.5rem;
       }
 }
 
-.intro_sub_msg{
+.introMessageTwo{
     color: rgb(255, 255, 255);
     font-size: 2rem;
     font-family: CAH;
@@ -51,7 +51,7 @@
 }
 
 @media (max-width:1200px){
-.intro_sub_msg {
+.introMessageTwo {
     font-size: 1.4rem;
     padding-top: 1rem;
     }
@@ -59,7 +59,7 @@
 
 //Logo in main gradient section
 
-.logo_body{
+.introLogo{
     position: absolute;
     opacity: 0.1;
     padding-bottom: 1rem;
@@ -68,20 +68,20 @@
 }
 
 @media (max-width:820px){
-.logo_body {
+.introLogo {
     height: 30rem;
     width: auto;
       }
 }
 
 @media (max-width:450px){
-.logo_body {
+.introLogo {
     height: 16rem;
     width: auto;
       }
 }
 
-.blur_effect{
+.blurEffect{
     width: 100%;
     height: 1rem;
     background-color: rgb(20, 18, 20);
@@ -89,6 +89,3 @@
     margin-top: -1rem;
 }
 
-.line{
-    position: relative;
-}

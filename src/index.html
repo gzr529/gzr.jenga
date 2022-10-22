@@ -10,66 +10,68 @@
 
 <body>
 
-    <nav class="main_bar">
-        <img class="logo" src="..\media\img\jenga.png">
-        <p class="main_title">gzr.jenga</p>
+    <nav class="headerBar">
+        <img class="headerLogo" src="..\media\img\jenga.png">
+        <p class="headerTitle">gzr.jenga</p>
     </nav>
 
-    <section class="intro_section">
-        <p class="intro_msg" data-aos="fade-up" data-aos-duration="3000" data-aos-anchor-placement="bottom-bottom">The game for degenerate people.</p>
-        <img class="logo_body" src="..\media\img\jenga.png" >
-        <p class="intro_sub_msg" data-aos="fade-up" data-aos-duration="4000" data-aos-anchor-placement="bottom-bottom">Don't be ashamed, its fun.</p>
+    <section class="introSection">
+        <p class="introMessageOne" data-aos="fade-up" data-aos-duration="3000" data-aos-anchor-placement="bottom-bottom">The game for degenerate people.</p>
+        <img class="introLogo" src="..\media\img\jenga.png" >
+        <p class="introMessageTwo" data-aos="fade-up" data-aos-duration="4000" data-aos-anchor-placement="bottom-bottom">Don't be ashamed, its fun.</p>
     </section>
 
-    <div class="blur_effect"></div> <!-- Simple Blur Transition for Seperation ================================-->
+    <div class="blurEffect"></div> <!-- Simple Blur Transition for Seperation ================================-->
 
-    <section class="content_section">
+    <section class="bodySection">
 
-        <div class="dare_section">
+        <div class="dareSection">
 
-            <div class="input_container"> 
-                <span class="button_container">
-                    <input class="dare_search" id="dareNumberSearch" placeholder="How many players..?">
+            <div class="inputsContainer"> 
+
+                <span class="buttonContainer">
+                    <input class="textInput" id="dareNumberSearch" placeholder="How many players..?">
                     <button class="enterButton" id="enterButton1">X</button>
                 </span>
 
-                <span class="button_container">
-                    <button class="randomDareButton spiceButton" id="randomDareButton" >Roll ANY Dare</button>
-                    <button class="randomDareButton noSpiceButton" id="randomDareButtonNoSpice" >Roll NO SPICE Dares</button>
+                <span class="buttonContainer">
+                    <button class="dareButton spiceButton" id="randomDareButton" >Roll ANY Dare</button>
+                    <button class="dareButton spiceNoButton" id="randomDareButtonNoSpice" >Roll NO SPICE Dares</button>
                 </span> 
 
-                <span class="button_container">
-                <input class="dare_search" id="myInput" placeholder="Search for dare number...">
+                <span class="buttonContainer">
+                <input class="textInput" id="myInput" placeholder="Search for dare number...">
                 <button class="enterButton" id="enterButton2">X</button>
                 </span>
-            </div>  
 
-            <span class="dare_container" id="dareContainer">
-                <p id="dareNumber" class="dare_number">#</p>
-                <p id="daresText" class="dares_text">What awaits you...?</p> 
-            </span>
+            </div>  <!-- End of Inputs Container -->
 
-            <hr class="line"> <!-- Simple Line for Seperation ================================-->
+            <div class="dareInfoContainer">
 
-            <div class="title_container">
-                <header class="original_dares_list_title">Original Dare List</header>
-                <div class="windowControls">
-                    <button id="minListOne" class="minMaxButton Minimize" title="Minimize">_</button>
-                    <button id="maxListOne" class="minMaxButton Maximize" title="Maximize">◱</button>
+                <span class="dareContainer" id="dareContainer">
+                    <p class="outputDareNumber" id="dareNumber">#</p>
+                    <p class="outputDareText" id="daresText">What awaits you...?</p> 
+                </span>
+
+                <hr class="line"> <!-- Simple Line for Seperation ================================-->
+
+                <div class="dareInfo">
+                    <header>Original Dare List</header>
+                    <div class="windowControls">
+                        <button class="resizeButton minimizeButton" id="minListOne" title="Minimize">_</button>
+                        <button class="resizeButton maximizeButton" id="maxListOne" title="Maximize">◱</button>
+                    </div>
                 </div>
-            </div>
+                <div class="text"></div>
+                <div class="dareList" id="orginialDaresList"> </div>
 
-            <div class="dare_list_container" id="orginialDaresList">
-               <div class="original_dares_overflow">
-                    <p class="dares_list_container"></p>
-                    <p class="dares_list_closing"></p>
-                </div>
-            </div>
+                </div> <!-- End of Dare Info Container -->
 
-        </div>
+            </div>
+            
     </section>
 
-    <script src="js/index.js"></script>
+    <script type="module" src="js/index.js"></script>
 
 </body>
 </html>
