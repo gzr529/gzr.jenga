@@ -6,15 +6,15 @@ var AOS = require('aos');
 AOS.init();
 
 const originalDares = [
-{dare: "Strip one piece of clothing.", dareNumber: 1, spicy: true},
-{dare: "Take a picture of you interlocking hands with the person three spaces left from you and post it on your Instagram story.", dareNumber: 2, spicy: false},
-{dare: "Flick the person across from you forehead.", dareNumber: 3, spicy: false},
-{dare: "Kiss the person to your right on the lips.", dareNumber: 4, spicy: true},
-{dare: "Have a push-up competition with the person to your right - the loser picks another block.", dareNumber: 5, spicy: false},
-{dare: "Rank everyone 1-10 on how attractive they are.", dareNumber: 6, spicy: false},
-{dare: "Let the person on your right text anyone from your phone (within reason)", dareNumber: 7, spicy: true},
-{dare: "Give a hickey on the neck to the person 2 seats away from you to the rights.", dareNumber: 8, spicy: true},
-{dare: "Boobs or Butt? 🤔", dareNumber: 9, spicy: true},
+{dare: "Strip one piece of clothing.", dareNumber: "0" + 1, spicy: true},
+{dare: "Take a picture of you interlocking hands with the person three spaces left from you and post it on your Instagram story.", dareNumber:"0" + 2, spicy: false},
+{dare: "Flick the person across from you forehead.", dareNumber: "0" + 3, spicy: false},
+{dare: "Kiss the person to your right on the lips.", dareNumber: "0" + 4, spicy: true},
+{dare: "Have a push-up competition with the person to your right - the loser picks another block.", dareNumber:"0" + 5, spicy: false},
+{dare: "Rank everyone 1-10 on how attractive they are.", dareNumber: "0" + 6, spicy: false},
+{dare: "Let the person on your right text anyone from your phone (within reason)", dareNumber: "0" + 7, spicy: true},
+{dare: "Give a hickey on the neck to the person 2 seats away from you to the rights.", dareNumber:"0" + 8, spicy: true},
+{dare: "Boobs or Butt? 🤔", dareNumber: "0" + 9, spicy: true},
 {dare: "Name the last person you’ve kissed with.", dareNumber: 10 , spicy: true},
 {dare: "Do a staring contest for 30 seconds person to your right, the person who fails rolls a dare", dareNumber: 11 , spicy: false},
 {dare: "Text your crush or ex.", dareNumber: 12 , spicy: false},
@@ -63,16 +63,20 @@ const originalDares = [
 ];
 
 //Grabs a ANY UNFLITERED DARE and displays the actual dare
-
 function getRandom(){
-    const randomDare = originalDares[Math.floor(Math.random() * originalDares.length)]
-    const randomDareText = (Object.values(randomDare)[0]);
-    const randomDareNumber = (Object.values(randomDare)[1]);
-    document.getElementById('daresText').innerHTML=(randomDareText);
+     const randomDare = originalDares[Math.floor(Math.random() * originalDares.length)]  //Grabs random object from main array
+    const randomDareText = (Object.values(randomDare)[0]);                              //Grabs first elemenet of previosuly grabbed object
+    const randomDareNumber = (Object.values(randomDare)[1]);                            //Grabs second elemenet of previosuly grabbed object
+    document.getElementById('daresText').innerHTML=(randomDareText);                    //Replaces text with fetced random dare
     document.getElementById('dareNumber').innerHTML=(randomDareNumber);
-};
+}
+
+
+//Filters out all SPICY DARE
 
 const noSpicyDares = originalDares.filter(dared => dared.spicy === false);
+
+//Grabs a UNSPICY DARE and displays the actual dare
 
 function getRandomNoSpice(){
     const randomDareNoSpice = noSpicyDares[Math.floor(Math.random() * noSpicyDares.length)]
@@ -85,11 +89,10 @@ function getRandomNoSpice(){
 document.getElementById('randomDareButton').addEventListener('click', getRandom)
 document.getElementById('randomDareButtonNoSpice').addEventListener('click', getRandomNoSpice)
 
-const originalDareList = (Object.values(Object.values(originalDares)[0])[0]);
+// const originalDareList = (Object.values(Object.values(originalDares)[0])[0]);
 
 originalDares.forEach((element) => {
 const individualDare = (Object.values(element)[0]);
-console.log(individualDare);
 document.getElementById('orginialDaresList').innerHTML+=(`<li id="dare_list_id" class="original_dares_list">` + individualDare + `</li>`);
 });
 
@@ -109,13 +112,13 @@ document.getElementById('orginialDaresList').style.color = "rgba(255, 255, 255, 
 
 document.getElementById('maxListOne').addEventListener('click', changeHeightMax)
 
-
 function fn1() {
     var enteredDareNumber = document.getElementById("dareNumberSearch").value;
     alert(enteredDareNumber + " players currently playing!");
+    return enteredDareNumber;
 };
 
-console.log(enteredDareNumber + "U");
+console.log(enteredDareNumber);
 
 document.getElementById('enterButton1').addEventListener('click', fn1)
 

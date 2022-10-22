@@ -34,8 +34,8 @@
                 </span>
 
                 <span class="button_container">
-                    <button class="randomDareButton" id="randomDareButton" >Roll ANY Dare</button>
-                    <button class="randomDareButton" id="randomDareButtonNoSpice" >Roll NO SPICE Dares</button>
+                    <button class="randomDareButton spiceButton" id="randomDareButton" >Roll ANY Dare</button>
+                    <button class="randomDareButton noSpiceButton" id="randomDareButtonNoSpice" >Roll NO SPICE Dares</button>
                 </span> 
 
                 <span class="button_container">
@@ -44,7 +44,7 @@
                 </span>
             </div>  
 
-            <span class="dare_container">
+            <span class="dare_container" id="dareContainer">
                 <p id="dareNumber" class="dare_number">#</p>
                 <p id="daresText" class="dares_text">What awaits you...?</p> 
             </span>
@@ -53,8 +53,10 @@
 
             <div class="title_container">
                 <header class="original_dares_list_title">Original Dare List</header>
-                <button id="minListOne" class="minMaxButton" title="Minimize">_</button>
-                <button id="maxListOne" class="minMaxButton" title="Maximize">◱</button>
+                <div class="windowControls">
+                    <button id="minListOne" class="minMaxButton Minimize" title="Minimize">_</button>
+                    <button id="maxListOne" class="minMaxButton Maximize" title="Maximize">◱</button>
+                </div>
             </div>
 
             <div class="dare_list_container" id="orginialDaresList">

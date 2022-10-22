@@ -2,7 +2,7 @@
 .button_container{
     display: flex;
     justify-content: center;
-    width: 100%;
+    width: 75%;
     align-items: center;
 }
 .randomDareButton,
@@ -30,12 +30,20 @@
   -webkit-user-select: none; /* Safari */      
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* IE10+/Edge */
-  user-select: none; 
-  margin: 1rem;
+  user-select: none;
+}
+
+.noSpiceButton{
+  margin-left: 1.5rem;
+}
+
+.randomDareButton{
+  width: 50%;
 }
 
 .dare_search{
-  width: 55%;
+  width: 95%;
+  margin-right: 0.7rem;
 }
 
 .randomDareButton:after {
@@ -76,6 +84,7 @@
     width: 3rem;
     height: 3rem;
     margin-left: 1rem;
+    margin-right: -1.4rem;
     color: rgb(255, 255, 255);
     background-color: rgba(255, 255, 255, 0);
     border: none;
@@ -88,11 +97,15 @@
 }
 
 .minMaxButton:hover{
-    color: rgb(81, 69, 69);
+  color: rgb(81, 69, 69);
 }
 
 .minMaxButton:hover:after{
-    transform: scale(2rem, 2rem);
+  transform: scale(2rem, 2rem);
+}
+
+.Maximize{
+  margin-right: -3rem;
 }
 
 .input_container{
