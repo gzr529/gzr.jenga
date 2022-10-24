@@ -6,6 +6,25 @@
     width: 75%;
 }
 
+@media (max-width:414px){
+.buttonContainer{
+    width: 90%
+}}
+
+@media (max-width:414px){
+.buttonContainerDesktop{
+    display: none;
+}}
+
+.buttonContainerMobile{
+    display: none;
+}
+
+@media (max-width:414px){
+.buttonContainerMobile{
+    display: flex;
+}}
+
 .textInput,
 .enterButton,
 .dareButton {
@@ -33,14 +52,25 @@
 }
 
 .textInput{
-  width: 93%;
+  width: 100%;
   margin-right: 1%;
 }
+
+@media (max-width:414px){
+.textInput{
+  font-size: 0.85rem;
+}}
 
 .enterButton{
   width: 6%;
   background-color: #f1daff;
 }
+
+@media (max-width:414px){
+.enterButton{
+  font-size: 0.85rem;
+  width: 3rem;
+}}
 
 .dareButton{
   width: 49%;
@@ -48,7 +78,7 @@
 
 .dareButton:after {
   //background: linear-gradient(90deg, rgba(176,0,255,1) 0%, rgba(69,16,158,1) 57%, rgba(92,69,143,1) 97%);
-   background: linear-gradient(79deg, rgba(99,9,121,1) 0%, rgba(210,44,242,1) 35%, rgba(217,9,243,1) 70%, rgba(158,0,255,1) 100%);
+  //background: linear-gradient(79deg, rgba(99,9,121,1) 0%, rgba(210,44,242,1) 35%, rgba(217,9,243,1) 70%, rgba(158,0,255,1) 100%);
   border-radius: 8px;
   content: "";
   display: block;
@@ -74,9 +104,20 @@
   outline: 0;
 }
 
+@media (max-width:414px){
+.dareButton{
+  font-size: 0.85rem;
+  width: 100%;
+}}
+
 .spiceNoButton{
   margin-left: 2%;
 }
+
+@media (max-width:414px){
+.spiceNoButton{
+    margin-left: 0;
+}}
 
 .resizeButton{
     width: 3rem;

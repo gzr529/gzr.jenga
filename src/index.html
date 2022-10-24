@@ -27,6 +27,8 @@
 
         <div class="dareSection">
 
+        <p class="disclaimer">Note* Player Number and Search Function Do Not Work</p>
+
             <div class="inputsContainer"> 
 
                 <span class="buttonContainer">
@@ -34,9 +36,17 @@
                     <button class="enterButton" id="enterButton1">X</button>
                 </span>
 
-                <span class="buttonContainer">
+                <span class="buttonContainer buttonContainerDesktop">
                     <button class="dareButton spiceButton" id="randomDareButton" >Roll ANY Dare</button>
                     <button class="dareButton spiceNoButton" id="randomDareButtonNoSpice" >Roll NO SPICE Dares</button>
+                </span> 
+
+                <span class="buttonContainer buttonContainerMobile">
+                    <button class="dareButton spiceButton" id="randomDareButtonMobile" >Roll ANY Dare</button>
+                </span> 
+
+                 <span class="buttonContainer buttonContainerMobile">
+                    <button class="dareButton spiceNoButton" id="randomDareButtonNoSpiceMobile" >Roll NO SPICE Dares</button>
                 </span> 
 
                 <span class="buttonContainer">
@@ -55,8 +65,8 @@
 
                 <hr class="line"> <!-- Simple Line for Seperation ================================-->
 
-                <div class="dareInfo">
-                    <header>Original Dare List</header>
+                <div class="dareInfoBar">
+                    <header class="dareTitle">Original Dare List</header>
                     <div class="windowControls">
                         <button class="resizeButton minimizeButton" id="minListOne" title="Minimize">_</button>
                         <button class="resizeButton maximizeButton" id="maxListOne" title="Maximize">◱</button>

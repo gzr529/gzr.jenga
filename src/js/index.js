@@ -88,7 +88,8 @@ function getRandomNoSpice(){
 
 document.getElementById('randomDareButton').addEventListener('click', getRandom)
 document.getElementById('randomDareButtonNoSpice').addEventListener('click', getRandomNoSpice)
-
+document.getElementById('randomDareButtonMobile').addEventListener('click', getRandom)
+document.getElementById('randomDareButtonNoSpiceMobile').addEventListener('click', getRandomNoSpice)
 // const originalDareList = (Object.values(Object.values(originalDares)[0])[0]);
 
 originalDares.forEach((element) => {

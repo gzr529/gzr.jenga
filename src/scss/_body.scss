@@ -14,7 +14,7 @@
 
 @media (max-width:450px){
 .introSection {
-    height: 40rem;
+    height: 60rem;
       }
 }
 
@@ -55,6 +55,22 @@
     font-size: 1.4rem;
     padding-top: 1rem;
     }
+}
+
+.disclaimer{
+    color: rgb(122, 126, 130);
+    font-size: 1.2rem;
+    padding-top: 0.7rem;
+    padding-left: 0.7rem;
+}
+
+@media (max-width:414px){
+.disclaimer{
+    color: rgb(122, 126, 130);
+    font-size: 0.8rem;
+    padding-top: 0.7rem;
+    padding-left: 0.7rem;
+}
 }
 
 //Logo in main gradient section
