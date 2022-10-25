@@ -30,7 +30,6 @@
 }
 
 .outputDareNumber{
-    position: relative;
     opacity: 20%;
     width: 1rem;
     font-size: 9rem;
@@ -44,8 +43,9 @@
 .outputDareNumber{
     margin-bottom: -8.3rem;
     font-size: 5rem;
-    opacity: 90%;
-    z-index: 98;
+    opacity: 100%;
+    color: rgb(74, 71, 71);
+    z-index: 106;
 }
 }
 
@@ -63,13 +63,7 @@
     font-size: 1.5rem;
     height: auto;
     margin-bottom: -1rem;
-    z-index: 99;
-}
-}
-
-@media (max-width:414px){
-.dareSection{
-    height: 10rem;
+    z-index: 108;
 }
 }
 
@@ -134,7 +128,6 @@
     -ms-transition: 2s;
     -o-transition: 2s;
     transition: 2s;
-    line-height: 0.5rem;
 }
 
 .dareList::-webkit-scrollbar {
@@ -166,15 +159,18 @@
     -webkit-transition:color .25s ease-in-out;
     transition:color .25s ease-in-out;
     list-style-type: numbered;
-    padding-top: 2rem;
-    width: max-content;
+    padding: 0.5rem 0rem; 
+    width: 105%;
+    overflow-wrap: hidden;
     margin-left: 0.3rem;
+    line-height: 1.9rem;
 }
 
 @media (max-width:414px){
 .dareText{
     font-size: 1rem;
-    line-height: 0.1rem;
+    padding: 0.4rem 0rem;
+    line-height: 1rem;
 }}
 
 .dareText:hover{
