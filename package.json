@@ -6,7 +6,7 @@
   "scripts": {
     "s": "parcel src/index.html --no-optimize",
     "build": "parcel build src/index.html",
-    "build-prod": "npx -p parcel-bundler parcel build src/index.html --no-optimizenp",
+    "build-prod": "npx -p parcel-bundler parcel build src/index.html --no-optimize",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
