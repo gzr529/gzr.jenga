@@ -10,7 +10,7 @@
    z-index: 99;
    height: 6rem;
    align-items: center;
-   justify-content: left;
+   justify-content: flex-start;
    list-style-type: none;
    text-align: center;
 }
@@ -20,7 +20,6 @@
    height: 4rem;
 }
 }
-
 
 .headerLogo{
    width: 80px;

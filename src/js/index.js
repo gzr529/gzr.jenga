@@ -58,19 +58,52 @@ const originalDares = [
 {dare: "Unhook the person to your left 9 seats away from you bra. If you fail to do so because you’re a nerd, you must to a Truth or Dare with said person.", dareNumber: 50, spicy: true},
 {dare: "Confess your weirdest fetish.", dareNumber: 51, spicy: false},
 {dare: "Paint the person 3 seats to your left’s nails.", dareNumber: 52 , spicy: false},
-{dare: "Go Again two moe times, if the tower falls this time, roll twice", dareNumber: 53, spicy: false},
+{dare: "Go Again two more times, if the tower falls this time, roll twice", dareNumber: 53, spicy: false},
 {dare: "Strip one piece of clothing.", dareNumber: 54, spicy: true},
 ];
 
 //Grabs a ANY UNFLITERED DARE and displays the actual dare
+const randomDareButton = document.getElementById('randomDareButton');
+const randomDareButtonNoSpice = document.getElementById('randomDareButtonNoSpice');
+const orginialDaresList = document.getElementById('orginialDaresList');
+const daresText = document.getElementById('daresText');
+const dareNumber = document.getElementById('dareNumber');
+const dareContainer = document.getElementById('dareContainer');
+const countOne = document.getElementById('countOne');
+const countTwo = document.getElementById('countTwo');
+const countThree = document.getElementById('countThree');
+
 function getRandom(){
-     const randomDare = originalDares[Math.floor(Math.random() * originalDares.length)]  //Grabs random object from main array
+    const randomDare = originalDares[Math.floor(Math.random() * originalDares.length)]  //Grabs random object from main array
     const randomDareText = (Object.values(randomDare)[0]);                              //Grabs first elemenet of previosuly grabbed object
     const randomDareNumber = (Object.values(randomDare)[1]);                            //Grabs second elemenet of previosuly grabbed object
-    document.getElementById('daresText').innerHTML=(randomDareText);                    //Replaces text with fetced random dare
-    document.getElementById('dareNumber').innerHTML=(randomDareNumber);
-}
+    daresText.innerHTML=(randomDareText);                    //Replaces text with fetced random dare
+    dareNumber.innerHTML=(randomDareNumber);
+};
 
+function aniGetRandom(){
+    dareContainer.style.opacity = "0";
+    randomDareButton.disabled = true;
+    setTimeout(() => { 
+        countOne.classList.add("countdownNumberAni");
+        countTwo.classList.add("countdownNumberAni");
+        countThree.classList.add("countdownNumberAni");
+    }, 500);
+    setTimeout(() => { 
+        countOne.classList.remove("countdownNumberAni"); 
+        countTwo.classList.remove("countdownNumberAni");
+        countThree.classList.remove("countdownNumberAni");
+    }, 3400);
+    setTimeout(() => { 
+        getRandom();
+        dareContainer.style.opacity = "1";
+    }, 2600);
+    setTimeout(() => { 
+        randomDareButton.disabled = false;
+    }, 3000);
+};
+
+randomDareButton.addEventListener("click", aniGetRandom);
 
 //Filters out all SPICY DARE
 
@@ -82,46 +115,57 @@ function getRandomNoSpice(){
     const randomDareNoSpice = noSpicyDares[Math.floor(Math.random() * noSpicyDares.length)]
     const randomDareTextNoSpice = (Object.values(randomDareNoSpice)[0]);
     const randomDareNumberNoSpice = (Object.values(randomDareNoSpice)[1]);
-    document.getElementById('daresText').innerHTML=(randomDareTextNoSpice);
-    document.getElementById('dareNumber').innerHTML=(randomDareNumberNoSpice);
+    daresText.innerHTML=(randomDareTextNoSpice);
+    dareNumber.innerHTML=(randomDareNumberNoSpice);
 };
 
-document.getElementById('randomDareButton').addEventListener('click', getRandom)
-document.getElementById('randomDareButtonNoSpice').addEventListener('click', getRandomNoSpice)
-document.getElementById('randomDareButtonMobile').addEventListener('click', getRandom)
-document.getElementById('randomDareButtonNoSpiceMobile').addEventListener('click', getRandomNoSpice)
+function aniGetNoSpiceRandom(){
+    dareContainer.style.opacity = "0";
+    randomDareButton.disabled = true;
+    setTimeout(() => { 
+        countOne.classList.add("countdownNumberAni");
+        countTwo.classList.add("countdownNumberAni");
+        countThree.classList.add("countdownNumberAni");
+    }, 500);
+    setTimeout(() => { 
+        countOne.classList.remove("countdownNumberAni"); 
+        countTwo.classList.remove("countdownNumberAni");
+        countThree.classList.remove("countdownNumberAni");
+    }, 3400);
+    setTimeout(() => { 
+        getRandomNoSpice();
+        dareContainer.style.opacity = "1";
+    }, 2600);
+    setTimeout(() => { 
+        randomDareButton.disabled = false;
+    }, 3000);
+};
+
+//randomDareButton.addEventListener('click', getRandom)
+randomDareButtonNoSpice.addEventListener('click', aniGetNoSpiceRandom)
 // const originalDareList = (Object.values(Object.values(originalDares)[0])[0]);
 
 originalDares.forEach((element) => {
 const individualDare = (Object.values(element)[0]);
-document.getElementById('orginialDaresList').innerHTML+=(`<li id="dare_list_id" class="dareText">` + individualDare + `</li>`);
+orginialDaresList.innerHTML+=(`<li id="dare_list_id" class="dareText">` + individualDare + `</li>`);
 });
 
 //Minimize or Maximize Div 
 
 function changeHeightMin() {
-document.getElementById('orginialDaresList').style.height = "0rem";
-document.getElementById('orginialDaresList').style.color = "rgba(0, 0, 0, 0.00)";
+orginialDaresList.style.height = "0rem";
+orginialDaresList.style.color = "rgba(0, 0, 0, 0.00)";
 }
 
 document.getElementById('minListOne').addEventListener('click', changeHeightMin)
 
 function changeHeightMax() {
-document.getElementById('orginialDaresList').style.height = "30rem"
-document.getElementById('orginialDaresList').style.color = "rgba(255, 255, 255, 0.35)";
+orginialDaresList.style.height = "30rem"
+orginialDaresList.style.color = "rgba(255, 255, 255, 0.35)";
 }
 
-document.getElementById('maxListOne').addEventListener('click', changeHeightMax)
+document.getElementById('maxListOne').addEventListener('click', changeHeightMax)  
 
-function fn1() {
-    var enteredDareNumber = document.getElementById("dareNumberSearch").value;
-    alert(enteredDareNumber + " players currently playing!");
-    return enteredDareNumber;
-};
-
-console.log(enteredDareNumber);
-
-document.getElementById('enterButton1').addEventListener('click', fn1)
 
 /*
 var xyz = document.getElementById(`myInput2`).value;

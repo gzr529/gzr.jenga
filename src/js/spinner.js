@@ -1,1 +1,0 @@
-console.log("RTC Connecting to SpiritPower...")

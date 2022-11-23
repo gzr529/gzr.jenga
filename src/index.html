@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="scss/main.scss">
     <title>gzr.jenga</title>
     <link rel="icon" type="image/x-icon" href="..\media\img\jenga.ico"">
+    <script src="https://kit.fontawesome.com/b97900a89e.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -28,56 +29,63 @@
 
         <div class="dareSection">
 
-        <p class="disclaimer">Note* Player Number and Search Function Do Not Work</p>
-
+        <p class="disclaimer"></i>Note* Player Number and Search Function Do Not Work</p>
             <div class="inputsContainer"> 
 
                 <span class="buttonContainer">
                     <input class="textInput" id="dareNumberSearch" placeholder="How many players..?">
-                    <button class="enterButton" id="enterButton1">X</button>
+                    <!-- <button class="enterButton" id="enterButton1">X</button> -->
+                    <span class="enterButton"><i class="fa-solid fa-arrow-right-to-bracket" id="enterButton1"></i></span>
                 </span>
 
                 <span class="buttonContainer buttonContainerDesktop">
                     <button class="dareButton spiceButton" id="randomDareButton" >Roll ANY Dare</button>
                     <button class="dareButton spiceNoButton" id="randomDareButtonNoSpice" >Roll NO SPICE Dares</button>
-                </span> 
-
-                <span class="buttonContainer buttonContainerMobile">
-                    <button class="dareButton spiceButton" id="randomDareButtonMobile" >Roll ANY Dare</button>
-                </span> 
-
-                 <span class="buttonContainer buttonContainerMobile">
-                    <button class="dareButton spiceNoButton" id="randomDareButtonNoSpiceMobile" >Roll NO SPICE Dares</button>
-                </span> 
-
-                <span class="buttonContainer">
-                <input class="textInput" id="myInput" placeholder="Search for dare number...">
-                <button class="enterButton" id="enterButton2">X</button>
                 </span>
 
+                <span class="buttonContainer">
+                    <input class="textInput" id="myInput" placeholder="Search for dare number...">
+                    <!-- <button class="enterButton" id="enterButton2">X</button> -->
+                    <span class="enterButton"><i class="fa-solid fa-arrow-right-to-bracket" id="enterButton2"></i></span>
+                </span>
+        
             </div>  <!-- End of Inputs Container -->
+
+            <div class="countdownContainer" id="countdownContainer">
+                <!--
+                <div class="countdownNumber" id="countOne"><i class="fa-solid fa-hourglass-start"></i></div>
+                <div class="countdownNumber" id="countTwo"><i class="fa-solid fa-hourglass-start fa-rotate-90"></i></div>
+                <div class="countdownNumber" id="countThree"><i class="fa-solid fa-hourglass-start fa-rotate-180"></i></div>
+                
+                <div class="countdownNumber" id="countOne">Ready?</i></div>
+                <div class="countdownNumber" id="countTwo">Set?</div>
+                <div class="countdownNumber" id="countThree">DARE!</div>
+                -->
+
+                <div class="countdownNumber" id="countOne"><i class="fa-solid fa-hourglass-start"></i></div>
+                <div class="countdownNumber" id="countTwo"><i class="fa-solid fa-hourglass-start fa-rotate-90"></i></div>
+                <div class="countdownNumber" id="countThree"><i class="fa-solid fa-hourglass-start fa-rotate-180"></i></div>
+            </div>
 
             <div class="dareInfoContainer">
 
-                <span class="dareContainer" id="dareContainer">
+                <span class="dareContainer" id="dareContainer" data-aos="fade-right" data-aos-delay="400">
                     <p class="outputDareNumber" id="dareNumber">#</p>
                     <p class="outputDareText" id="daresText">What awaits you...?</p> 
                 </span>
 
                 <hr class="line"> <!-- Simple Line for Seperation ================================-->
-
+            <div class="dareListWrapper">
                 <div class="dareInfoBar">
                     <header class="dareTitle">Original Dare List</header>
-                    <div class="windowControls">
-                        <button class="resizeButton minimizeButton" id="minListOne" title="Minimize">_</button>
-                        <button class="resizeButton maximizeButton" id="maxListOne" title="Maximize">◱</button>
-                    </div>
+                        <i class="fa-solid fa-window-minimize resizeButton minimizeButton" id="minListOne" title="Minimize"></i>
+                        <!-- <button class="resizeButton minimizeButton" id="minListOne" title="Minimize">_</button> -->
+                        <i class="fa-solid fa-expand resizeButton maximizeButton" id="maxListOne" title="Maximize"></i>
+                        <!-- <button class="resizeButton maximizeButton" id="maxListOne" title="Maximize">◱</button> -->
                 </div>
-                <div class="text"></div>
-                <div class="dareList" id="orginialDaresList"> </div>
-
+                    <div class="dareList" id="orginialDaresList"></div>
+                </div>
                 </div> <!-- End of Dare Info Container -->
-
             </div>
             
     </section>

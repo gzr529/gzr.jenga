@@ -10,8 +10,8 @@
 
 .dareSection {
     height: max-content;
-    padding-bottom: 1.5rem;
-    width: 90%;
+    padding-bottom: 5vh;
+    width: 95vw;
     margin: 1rem;
     font-size: 2rem;
     font-family: CAH;
@@ -27,6 +27,51 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+}
+
+.countdownContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    place-items: center;
+    padding: 3rem;
+    position: absolute;
+}
+
+.countdownNumber{
+    transform: translate3d(-100vw, 0, 0);
+    opacity: 1;
+    position: absolute;
+    padding-top: 3rem;
+}
+
+.countdownNumberAni{
+    animation: 1s cubic-bezier(.41,1.2,.76,.81) fadeFromLeft;
+}
+
+.countdownContainer div:nth-child(2){
+    animation-delay: 0.8s;
+}
+
+.countdownContainer div:nth-child(3){
+    animation-delay: 1.6s;
+}
+
+@keyframes fadeFromLeft {
+    90%{
+    transform: translate3d(45vw, 0, 0); 
+    opacity: 1;
+    }
+    95% {
+    transform: translate3d(53vw, 0, 0);
+    }
+    98% {
+    transform: translate3d(57vw, 0, 0);
+    }
+    100%{
+    transform: translate3d(-100vw, 0, 0);
+    opacity: 0;
+    }
 }
 
 .outputDareNumber{
@@ -67,16 +112,20 @@
 }
 }
 
-/*
-#dareContainer{
+.dareContainer{
     -webkit-transition: opacity 0.3s ease-in-out;
     -moz-transition: opacity 0.3 ease-in-out;
     -ms-transition: opacity 0.3s ease-in-out;
     -o-transition: opacity 0.3 ease-in-out;
     transition: opacity 0.3s ease-in-out;
-    opacity: 0;
 }
 
+.dareListWrapper{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+/*
 #dareContainer.fade{
     opacity: 1;
 }
@@ -86,15 +135,15 @@
     display: flex;
     flex-direction: row;
     background-color:rgb(40,36,36);
-    width: 75%;
-    height: 5rem;
-    padding: 1rem;
-    padding-right: 4rem;
-    padding-bottom: 2rem;
-    margin-left: 2rem;
-    margin-bottom: -3.3rem;
+    width: 90vw;
     border-radius: 1rem;
-    z-index: 99;
+    -webkit-transition: 2s;
+    -moz-transition: 2s;
+    -ms-transition: 2s;
+    -o-transition: 2s;
+    transition: 2s;
+    padding-bottom: 2vh;
+    padding-top: 1.5vh; 
     justify-content: space-between;
 }
 
@@ -110,19 +159,17 @@
 .dareList{
     background-color:rgb(40,36,36);
     color: rgba(255, 255, 255, 0.35);
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
     border-top: 2px solid rgba(255, 255, 255, 0.305);
-    padding: 1rem;
-    padding-right: 4rem;
-    margin-left: 2rem;
     margin-top: -2rem;
+    padding-top: 0.1vh;
     overflow-y: scroll;
     overflow-x: hidden;
-    height: 10rem;
-    width: 75%;
+    width: 90vw;
     text-overflow: ellipsis;
-    height: 30rem;
     -webkit-transition: 2s;
     -moz-transition: 2s;
     -ms-transition: 2s;
@@ -142,7 +189,12 @@
 }}
 
 .dareTitle{
-    font-size: 3rem;
+    font-size: 2rem;
+    align-self: left;
+    padding-left: 1vw;
+    justify-self: center;
+    padding-bottom: 2vh;
+    flex-grow: 10;
 }
 
 @media (max-width:414px){
@@ -164,6 +216,7 @@
     overflow-wrap: hidden;
     margin-left: 0.3rem;
     line-height: 1.9rem;
+    padding-left: 1vw;
 }
 
 @media (max-width:414px){

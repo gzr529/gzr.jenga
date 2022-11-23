@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "parcel src/index.html",
+    "s": "parcel src/index.html",
     "build": "parcel build src/index.html",
     "build-prod": "npx -p parcel-bundler parcel build src/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,9 +17,10 @@
     "sass": "^1.53.0"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.2.0",
     "@types/aos": "^3.0.4",
     "aos": "^3.0.0-beta.6",
-    "cssnano": "^4.1.11",
+    "cssnano": "^5.1.14",
     "parcel": "^2.7.0"
   }
 }
