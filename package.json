@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "s": "parcel src/index.html",
+    "s": "parcel src/index.html --no-optimize",
     "build": "parcel build src/index.html",
-    "build-prod": "npx -p parcel-bundler parcel build src/index.html",
+    "build-prod": "npx -p parcel-bundler parcel build src/index.html --no-optimizenp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -21,6 +21,6 @@
     "@types/aos": "^3.0.4",
     "aos": "^3.0.0-beta.6",
     "cssnano": "^5.1.14",
-    "parcel": "^2.7.0"
+    "parcel": "^2.8.0"
   }
 }
